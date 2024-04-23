@@ -1,0 +1,5 @@
+<div class="card  mb-3" style="max-width: 18rem;">
+    <div class="card-header text-center text-bg-primary"><strong>{{this.user?.first_name}} {{this.user?.last_name}}</strong></div>
+    <img [src]="this.user?.avatar" class="card-img-top" [alt]="this.user?.first_name">
+    <div class="card-footer text-center text-bg-primary">{{this.user?.email}}</div>
+</div>

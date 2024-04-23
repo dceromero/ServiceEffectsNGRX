@@ -1,0 +1,17 @@
+<div *ngIf="loading" class="alert alert-info text-center">
+    <h4 class="alert-heading">Cargando</h4>
+    <p>
+        <i class="fa fa-sync fa-spin fa-2x" aria-hidden="true"></i>
+    </p>
+</div>
+
+<div *ngIf="!loading" class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let user of this.usuarios">
+        <div class="card  mb-3" style="max-width: 18rem;">
+            <div class="card-header text-center text-bg-primary"><strong>{{user.first_name}}
+                    {{user.last_name}}</strong></div>
+            <img [src]="this.user?.avatar" class="card-img-top" [alt]="user?.first_name">
+            <div class="card-footer text-center text-bg-primary">{{user?.email}}</div>
+        </div>
+    </div>
+</div>
